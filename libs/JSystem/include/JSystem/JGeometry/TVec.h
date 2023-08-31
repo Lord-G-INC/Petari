@@ -66,11 +66,11 @@ namespace JGeometry {
         }
 
         template<typename T>
-        inline TVec3(T _x, T _y, T _z) {
-            x = _x;
-            y = _y;
-            z = _z;
-        }
+        inline TVec3(T _x, T _y, T _z);// {
+        //    x = _x;
+        //    y = _y;
+        //    z = _z;
+        //}
 
         TVec3(T val) {
             x = val;
@@ -215,37 +215,37 @@ namespace JGeometry {
         /* Operators */
         TVec3<T>& operator=(const TVec3<T> &);
         TVec3<T>& operator+=(const TVec3<T> &);
-        TVec3<T>& operator-=(register const TVec3<T> &src) NO_INLINE {
-            register TVec3<T>* dst = this;
-
-            __asm {
-                psq_l f0, 0(dst), 0, 0
-                psq_l f1, 0(src), 0, 0
-                psq_l f2, 8(dst), 1, 0
-                ps_sub f0, f0, f1
-                psq_l f3, 8(src), 1, 0
-                ps_sub f1, f2, f3
-                psq_st f0, 0(dst), 0, 0
-                psq_st f1, 8(dst), 1, 0
-            };
-        }
+        TVec3<T>& operator-=(register const TVec3<T> &src);// NO_INLINE {
+        //    register TVec3<T>* dst = this;
+//
+        //    __asm {
+        //        psq_l f0, 0(dst), 0, 0
+        //        psq_l f1, 0(src), 0, 0
+        //        psq_l f2, 8(dst), 1, 0
+        //        ps_sub f0, f0, f1
+        //        psq_l f3, 8(src), 1, 0
+        //        ps_sub f1, f2, f3
+        //        psq_st f0, 0(dst), 0, 0
+        //        psq_st f1, 8(dst), 1, 0
+        //    };
+        //}
     
         TVec3<T>& operator*=(T);
 
         TVec3<T> operator+(const TVec3<T> &) const;
         TVec3<T> operator-(const TVec3<T> &) const;
-        const TVec3<T> operator-() const NO_INLINE {
-            register f32 z, xy;
-            __asm {
-                psq_l xy, 0(r4), 0, 0
-                lfs z, 8(r4)
-                ps_neg xy, xy
-                fneg z, z
-                psq_st xy, 0(r3), 0, 0
-                stfs z, 8(r3)
-                blr
-            }
-        }
+        const TVec3<T> operator-() const;// NO_INLINE {
+        //    register f32 z, xy;
+        //    __asm {
+        //        psq_l xy, 0(r4), 0, 0
+        //        lfs z, 8(r4)
+        //        ps_neg xy, xy
+        //        fneg z, z
+        //        psq_st xy, 0(r3), 0, 0
+        //        stfs z, 8(r3)
+        //        blr
+        //    }
+        //}
 
         TVec3<T> operator*(T scalar) const NO_INLINE {
             TVec3<T> f = *this;
