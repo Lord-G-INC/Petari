@@ -2,6 +2,7 @@
 
 #include "Game/LiveActor/LiveActor.h"
 #include "Game/MapObj/DummyDisplayModel.h"
+#include "Game/MapObj/Coin.h"
 
 class CrystalCage : public LiveActor {
 public:
@@ -44,6 +45,7 @@ public:
     bool mHasBinding;                               // _10E
     u8 _10F;
     TVec3f _110;
+    Coin* cmPurpleCoin;
 };
 
 namespace NrvCrystalCage {

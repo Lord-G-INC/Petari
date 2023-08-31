@@ -4,8 +4,6 @@
 #include "JSystem/JGeometry.h"
 #include "Game/NameObj/NameObjArchiveListCollector.h"
 
-class DummyDisplayModelInfo;
-
 struct DummyDisplayModelInfo {
     const char* mModelName;
     Vec mOffset;          
