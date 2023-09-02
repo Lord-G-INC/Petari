@@ -45,7 +45,9 @@ public:
     bool mHasBinding;                               // _10E
     u8 _10F;
     TVec3f _110;
+    #ifdef TKPC
     Coin* cmPurpleCoin;
+    #endif
 };
 
 namespace NrvCrystalCage {

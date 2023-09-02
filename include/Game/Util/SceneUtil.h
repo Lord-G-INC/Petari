@@ -52,6 +52,7 @@ namespace MR {
     bool isStageKoopaVs3();
 
     bool isStageAstroLocation();
+    bool isStageBeginPrologueEvent();
 
     bool isBeginScenarioStarter();
 
@@ -69,4 +70,7 @@ namespace MR {
     const char* getAppearPowerStarObjName(s32);
 
     JMapIdInfo& getInitializeStartIdInfo();
+
+    void requestChangeSceneTitle();
+    void requestChangeStageGoBackAstroDome();
 }

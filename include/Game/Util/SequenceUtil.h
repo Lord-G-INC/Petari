@@ -7,7 +7,6 @@ namespace MR {
 
     void requestStartScenarioSelect(const char *);
     void requestGoToAstroDomeFromAstroGalaxy(s32, s32);
-    void requestStartScenarioSelect(const char *);
 
     void requestGoToAstroGalaxy(s32);
 
