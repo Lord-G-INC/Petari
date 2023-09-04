@@ -4,6 +4,7 @@
 
 namespace MR {
     void requestChangeStageInGameMoving(const char *, s32, const JMapIdInfo &);
+    void requestChangeStageInGameMoving(const char *, s32);
 
     void requestStartScenarioSelect(const char *);
     void requestGoToAstroDomeFromAstroGalaxy(s32, s32);
