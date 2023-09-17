@@ -271,7 +271,7 @@ namespace MR {
     }
 
     f32 cos(f32);
-    f32 sin(f32 val) {
+    f32 sin(f32 val);// {
         /*f32 res;
 
         if (val < 0.0f) {
@@ -283,8 +283,8 @@ namespace MR {
 
         return res;*/
 
-        return JMath::sSinCosTable.sinLap(val);
-    }
+    //    return JMath::sSinCosTable.sinLap(val);
+    //}
 
     inline f32 sin_inline(f32 val) {
         return JMath::sSinCosTable.sinLap(val);
